@@ -18,7 +18,7 @@ import { MaterialModule } from '../angular-material/material.module';
 
 })
 export class Pregunta2Component implements OnInit {
-  
+
   displayedColumns: string[] = ['name', 'status', 'gender', 'species'];
   dataSource = new MatTableDataSource<Character>();
 

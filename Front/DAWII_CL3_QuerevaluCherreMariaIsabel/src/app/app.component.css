@@ -1,0 +1,22 @@
+.clickable {
+  cursor: pointer;
+}
+
+.example-icon {
+  margin-right: 10px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.favorite-icon {
+  color: red;
+}
+
+.custom-toolbar {
+  background-color: #673ab7;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
