@@ -1,0 +1,36 @@
+<h1 class="titulo">Rick and Morty Humanos</h1>
+
+<div class="table-container mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Nombre  -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let character"> {{character.name}} </td>
+    </ng-container>
+
+    <!-- Status  -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let character"> {{character.status}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef> Género </th>
+      <td mat-cell *matCellDef="let character"> {{character.gender}} </td>
+    </ng-container>
+
+    <!-- Especies  -->
+    <ng-container matColumnDef="species">
+      <th mat-header-cell *matHeaderCellDef> Especie </th>
+      <td mat-cell *matCellDef="let character" [ngClass]="{'human-text': character.species === 'Human'}">
+        {{character.species}}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons></mat-paginator>
+</div>
